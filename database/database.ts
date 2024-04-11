@@ -1,9 +1,8 @@
 require('dotenv').config()
 //require mongoose module
-import mongoose from 'mongoose'
-
 //require chalk module to give colors to console text
 import chalk from 'chalk'
+import mongoose from 'mongoose';
 
 //require database URL from properties file
 const dbURL = process.env.DB_URL
@@ -50,5 +49,5 @@ export const connectMongoDB = () => {
 }
 
 export const isValidId = (id: string) => {
-  return mongoose.Types.ObjectId.isValid(id)
+  return mongoose.isValidObjectId(id);
 }

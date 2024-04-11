@@ -11,4 +11,4 @@ export const isAdmin = (req: Request) => {
   return req.jwtDecoded?.roles?.includes(ROLE.ADMIN)
 }
 
-export const isMongoId = (id) => mongoose.Types.ObjectId.isValid(id)
+export const isMongoId = (id) => mongoose.isValidObjectId(id)
